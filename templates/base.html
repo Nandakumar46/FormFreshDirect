@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}FarmFreshDirect{% endblock %}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a class="nav-brand" href="{% url 'home' %}">FarmFreshDirect</a>
+            <ul class="nav-links">
+                <li><a href="{% url 'store:product_list' %}">Products</a></li>
+                {% if user.is_authenticated %}
+                    {% if user.profile.user_type == 'FARMER' %}
+                        <li><a href="{% url 'store:add_product' %}">Add Product</a></li>
+                    {% else %}
+                        <li><a href="{% url 'store:view_cart' %}">My Cart</a></li>
+                    {% endif %}
+                    <li><a href="#">Hi, {{ user.username }}</a></li>
+                    <li>
+                        <form action="{% url 'accounts:logout' %}" method="post" style="display:inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="nav-logout-btn">Logout</button>
+                        </form>
+                    </li>
+                {% else %}
+                    <li><a href="{% url 'accounts:login' %}">Login</a></li>
+                    <li><a href="{% url 'accounts:signup' %}">Sign Up</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 FarmFreshDirect. All rights reserved.</p>
+    </footer>
+</body>
+</html>

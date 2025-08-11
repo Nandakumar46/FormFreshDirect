@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Confirmation</title>
+</head>
+<body style="font-family: Arial, sans-serif;">
+    <h2>Thank you for your order, {{ user.username }}!</h2>
+    <p>We've received your order #{{ order.id }} and are getting it ready.</p>
+
+    <h3>Shipping Address:</h3>
+    <p>
+        {{ order.shipping_address.address_line_1 }}<br>
+        {% if order.shipping_address.address_line_2 %}
+            {{ order.shipping_address.address_line_2 }}<br>
+        {% endif %}
+        {{ order.shipping_address.city }}, {{ order.shipping_address.state }} {{ order.shipping_address.postal_code }}<br>
+        {{ order.shipping_address.country }}
+    </p>
+
+    <h3>Order Summary:</h3>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in order.items.all %}
+            <tr>
+                <td>{{ item.product.name }}</td>
+                <td>{{ item.quantity }}</td>
+                <td>₹{{ item.price|floatformat:2 }}</td> {# Changed $ to ₹ #}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h3>Total: ₹{{ order.total_price|floatformat:2 }}</h3> {# Changed $ to ₹ #}
+    <p>Thanks for shopping with FarmFreshDirect!</p>
+</body>
+</html>

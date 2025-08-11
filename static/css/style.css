@@ -1,0 +1,318 @@
+/* static/css/style.css */
+body {
+    font-family: 'Poppins', sans-serif; /* Changed font */
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    min-height: 70vh;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #2c5e1a;
+    color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.nav-links li {
+    margin-left: 20px;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+.nav-logout-btn {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.nav-logout-btn:hover {
+    background-color: white;
+    color: #2c5e1a;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+    animation: animated-glow 6s ease-in-out infinite;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+.btn-primary {
+    background-color: #4CAF50;
+}
+
+/* Forms */
+.form-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+.form-container p {
+    margin-bottom: 15px;
+}
+.form-container input, .form-container textarea, .form-container select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+.product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.product-card img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.product-price {
+    font-size: 1.2rem;
+    color: #2c5e1a;
+    font-weight: bold;
+}
+.product-farmer {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Messages */
+.messages {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    list-style: none;
+}
+.message-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.message-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Cart & Order Details */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+.cart-table th, .cart-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+.cart-table th {
+    background-color: #f2f2f2;
+}
+.cart-table tfoot {
+    font-size: 1.2em;
+}
+.cart-actions {
+    text-align: right;
+    margin-top: 20px;
+}
+.shipping-details {
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* The Animation Definition */
+@keyframes animated-glow {
+    0% { box-shadow: 0 0 25px 5px #4CAF50; }
+    25% { box-shadow: 0 0 25px 5px #FFEB3B; }
+    50% { box-shadow: 0 0 25px 5px #FF9800; }
+    75% { box-shadow: 0 0 25px 5px #03A9F4; }
+    100% { box-shadow: 0 0 25px 5px #4CAF50; }
+}
+/* static/css/style.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* ... (Keep all your existing CSS from .container to .product-farmer) ... */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    min-height: 70vh;
+}
+.navbar {
+    background-color: #2c5e1a;
+    color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.nav-links li { margin-left: 20px; }
+.nav-links a { color: white; text-decoration: none; }
+.nav-logout-btn {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.nav-logout-btn:hover { background-color: white; color: #2c5e1a; }
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+    animation: animated-glow 6s ease-in-out infinite;
+}
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+.btn-primary { background-color: #4CAF50; }
+
+/* Add new button styles */
+.btn-secondary { background-color: #6c757d; }
+.btn-danger { background-color: #dc3545; }
+
+
+.form-container { max-width: 500px; margin: 20px auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
+.form-container p { margin-bottom: 15px; }
+.form-container input, .form-container textarea, .form-container select { width: 100%; padding: 8px; box-sizing: border-box; }
+.form-container label { display: block; margin-bottom: 5px; }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+.product-card { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 15px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.product-card img { max-width: 100%; height: 150px; object-fit: cover; border-radius: 5px; }
+.product-price { font-size: 1.2rem; color: #2c5e1a; font-weight: bold; }
+.product-farmer { font-size: 0.9rem; color: #777; }
+
+/* Add new container style for the farmer buttons */
+.farmer-actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.farmer-actions form {
+    margin: 0;
+}
+
+
+.messages { padding: 15px; margin-bottom: 20px; border-radius: 5px; list-style: none; }
+.message-success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+.message-error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+.cart-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+.cart-table th, .cart-table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+.cart-table th { background-color: #f2f2f2; }
+.cart-table tfoot { font-size: 1.2em; }
+.cart-actions { text-align: right; margin-top: 20px; }
+.shipping-details { margin-top: 30px; padding: 15px; border: 1px solid #ddd; border-radius: 5px; background-color: #fafafa; }
+.footer { text-align: center; padding: 20px; margin-top: 20px; background-color: #333; color: white; }
+@keyframes animated-glow {
+    0% { box-shadow: 0 0 25px 5px #4CAF50; }
+    25% { box-shadow: 0 0 25px 5px #FFEB3B; }
+    50% { box-shadow: 0 0 25px 5px #FF9800; }
+    75% { box-shadow: 0 0 25px 5px #03A9F4; }
+    100% { box-shadow: 0 0 25px 5px #4CAF50; }
+}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Checkout - Shipping Address{% endblock %}
+{% block content %}
+    <h2>Shipping Address</h2>
+    <p>Please enter the address where you would like your order delivered.</p>
+    <form method="post" class="form-container">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Place Order</button>
+    </form>
+{% endblock %}
